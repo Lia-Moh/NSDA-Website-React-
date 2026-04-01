@@ -17,7 +17,7 @@ export default function SectionWrapper({
         padding: '4rem 0'
       }}
     >
-      <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1rem' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1rem' }}>
         {children}
       </div>
     </section>
