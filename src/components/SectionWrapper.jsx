@@ -6,7 +6,7 @@ export default function SectionWrapper({
   className = '', 
   backgroundColor = 'white' 
 }) {
-  const bgColor = backgroundColor === 'cloud' ? 'var(--cloud-break)' : backgroundColor;
+  const bgColor = backgroundColor === 'cloud' ? 'var(--cloud-break)' : 'white';
   
   return (
     <section 
