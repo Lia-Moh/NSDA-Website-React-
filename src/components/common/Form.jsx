@@ -1,6 +1,26 @@
 import React, { useState } from 'react';
 import SectionWrapper from './SectionWrapper';
-
+ const fieldsOfStudy = [
+    'Computer Science',
+    'Software Engineering',
+    'Information Technology',
+    'Data Science',
+    'Cybersecurity',
+    'Other'
+  ];
+  
+  const universities = [
+    'Addis Ababa University',
+    'Addis Ababa Science and Technology University',
+    'Bahir Dar University',
+    'Jimma University',
+    'Mekelle University',
+    'Haramaya University',
+    'Debre Berhan University',
+    'Wolaita Sodo University',
+    'Other'
+  ];
+  
 export default function Form() {
   const [formData, setFormData] = useState({
     fullName: '',
@@ -32,27 +52,6 @@ export default function Form() {
       reason: ''
     });
   };
-  
-  const fieldsOfStudy = [
-    'Computer Science',
-    'Software Engineering',
-    'Information Technology',
-    'Data Science',
-    'Cybersecurity',
-    'Other'
-  ];
-  
-  const universities = [
-    'Addis Ababa University',
-    'Addis Ababa Science and Technology University',
-    'Bahir Dar University',
-    'Jimma University',
-    'Mekelle University',
-    'Haramaya University',
-    'Debre Berhan University',
-    'Wolaita Sodo University',
-    'Other'
-  ];
   
   return (
     <SectionWrapper id="register" backgroundColor="cloud">
