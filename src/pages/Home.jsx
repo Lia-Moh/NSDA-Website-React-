@@ -2,7 +2,7 @@ import React from 'react';
 import Form from '../components/common/Form';
 import Footer from '../components/layout/Footer';
 import CTA from '../sections/CTA';
-
+import Projects from '../sections/Projects';
 function Home() {
   return (
     <main>
