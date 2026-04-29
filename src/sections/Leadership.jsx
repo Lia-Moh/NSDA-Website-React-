@@ -2,6 +2,7 @@ import React from 'react';
 
 export default function Leadership() {
   const foundingTeam = [
+    // ... (your existing members) ...
     { name: "Osama Seid", role: "President", university: "Jimma University", icon: "fa-user-tie", gender: "male", linkedin: "https://www.linkedin.com/in/osama-seid-a2978129a" },
     { name: "Nebiyou Elias (Nebil)", role: "Vice President", university: "AASTU", icon: "fa-user", gender: "male", linkedin: "https://www.linkedin.com/in/nebiyou-elias-mohammed/" },
     { name: "Abdelaziz Ebrahim", role: "Content Head", university: "Bahir Dar University", icon: "fa-newspaper", gender: "male", linkedin: "https://www.linkedin.com/in/abdelazizEbrahim/" },
@@ -16,6 +17,8 @@ export default function Leadership() {
     { name: "Abdulaziz Ayalew", role: "Content Head", university: "AASTU", icon: "fa-newspaper", gender: "male", linkedin: "https://www.linkedin.com/in/abdulaziz-ayalew" },
     { name: "Sitra Seyfu", role: "Sisters Production Head", university: "Jimma University", icon: "fa-video", gender: "female", linkedin: "#" },
     { name: "Imadudin Keremu", role: "Project Manager", university: "Haramaya University", icon: "fa-tasks", gender: "male", linkedin: "#" },
+    // New Member Added Here
+    { name: "Miftah Fentaw", role: "Communication Head", university: "Haramaya University", icon: "fa-bullhorn", gender: "male", linkedin: "https://www.linkedin.com/in/miftah-fentaw/" },
   ];
 
   const getIconColor = (gender) => {
@@ -25,32 +28,32 @@ export default function Leadership() {
   };
 
   return (
-    <section className="py-24 relative" id="leadership" style={{ backgroundColor: '#F3F3FF' }}>
-      <div className="container mx-auto px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#013463' }}>Guided by Visionaries</h2>
+    <section className="py-16 md:py-24 relative" id="leadership" style={{ backgroundColor: '#F3F3FF' }}>
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-10 md:mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold mb-3 md:mb-4" style={{ color: '#013463' }}>Guided by Visionaries</h2>
           <div className="w-24 h-1 mx-auto rounded-full" style={{ backgroundColor: '#DDA23A' }}></div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 md:gap-6">
           {foundingTeam.map((member, index) => (
             <a
               key={index}
               href={member.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="group text-center block transition-all hover:-translate-y-2"
+              className="group text-center block transition-all duration-300 hover:-translate-y-2"
               style={{ textDecoration: 'none' }}
             >
               <div className="relative inline-block mb-3">
                 <div className="absolute inset-0 rounded-full transform scale-0 group-hover:scale-110 transition-transform duration-300" style={{ backgroundColor: '#DDA23A' }}></div>
-                <div className="w-20 h-20 rounded-full flex items-center justify-center text-2xl relative z-10 mx-auto" style={{ backgroundColor: 'rgba(1, 52, 99, 0.1)', color: getIconColor(member.gender) }}>
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center text-xl md:text-2xl relative z-10 mx-auto" style={{ backgroundColor: 'rgba(1, 52, 99, 0.1)', color: getIconColor(member.gender) }}>
                   <i className={`fas ${member.icon}`}></i>
                 </div>
               </div>
-              <h5 className="font-bold text-sm" style={{ color: '#013463' }}>{member.name}</h5>
-              <p className="text-xs font-semibold mt-1" style={{ color: '#DDA23A' }}>{member.role}</p>
-              <p className="text-xs text-gray-500 mt-1">{member.university}</p>
+              <h5 className="font-bold text-xs md:text-sm" style={{ color: '#013463' }}>{member.name}</h5>
+              <p className="text-[10px] md:text-xs font-semibold mt-1" style={{ color: '#DDA23A' }}>{member.role}</p>
+              <p className="text-[10px] md:text-xs text-gray-500 mt-1">{member.university}</p>
             </a>
           ))}
         </div>

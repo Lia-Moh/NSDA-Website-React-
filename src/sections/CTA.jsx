@@ -3,7 +3,7 @@ import React from 'react';
 export default function CTA() {
   return (
     <div style={{
-      backgroundColor: '#0a1428',
+      backgroundColor: '#013463', // Changed from '#0a1428' to match the main theme
       color: 'white',
       padding: '80px 20px',
       textAlign: 'center'
@@ -46,7 +46,7 @@ export default function CTA() {
             rel="noopener noreferrer"
             style={{
               backgroundColor: '#DDA23A',
-              color: '#0a1428',
+              color: '#013463', // Changed to match new background
               padding: '14px 32px',
               borderRadius: '9999px',
               fontWeight: '600',
@@ -86,7 +86,7 @@ export default function CTA() {
             }}
             onMouseEnter={(e) => {
               e.target.style.backgroundColor = '#DDA23A';
-              e.target.style.color = '#0a1428';
+              e.target.style.color = '#013463'; // Changed to match
               e.target.style.transform = 'scale(1.05)';
             }}
             onMouseLeave={(e) => {

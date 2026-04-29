@@ -12,15 +12,18 @@ import Footer from '../components/layout/Footer';
 
 function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <Navbar />
-      <Hero />
-      <About />
-      <WhatWeDo />
-      <Mentorship />
-      <Projects />
-      <Nujum />
-      <Leadership />
+      {/* Add padding-top to hero to prevent hiding under fixed navbar */}
+      <div style={{ paddingTop: '70px' }}>
+        <Hero />
+      </div>
+      <div id="about"><About /></div>
+      <div id="what-we-do"><WhatWeDo /></div>
+      <div id="mentorship"><Mentorship /></div>
+      <div id="projects"><Projects /></div>
+      <div id="nujum"><Nujum /></div>
+      <div id="leadership"><Leadership /></div>
       <CTA />
       <Footer />
     </main>
