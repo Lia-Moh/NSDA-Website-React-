@@ -99,9 +99,6 @@ function Projects() {
                     +8
                   </div>
                 </div>
-                <a className="flex items-center font-bold text-primary hover:text-secondary transition-colors" href="#">
-                  View Repository <span className="material-symbols-outlined ml-2">arrow_outward</span>
-                </a>
               </div>
             </div>
             
@@ -162,9 +159,6 @@ function Projects() {
                     Firestore
                   </span>
                 </div>
-                <button className="px-8 py-4 bg-primary text-white rounded-xl font-bold flex items-center hover:bg-primary/90 transition-colors">
-                  Launch Project <span className="material-symbols-outlined ml-2">rocket_launch</span>
-                </button>
               </div>
             <div className="flex-1 relative">
   <div className="relative rounded-lg overflow-hidden border-4 border-surface shadow-2xl bg-white">
@@ -286,9 +280,6 @@ function Projects() {
                   <span className="text-white">Hands-on experience with production-grade stacks</span>
                 </div>
               </div>
-              <button className="w-full md:w-auto px-10 py-5 bg-secondary-container text-primary font-extrabold rounded-xl hover:scale-95 transition-transform">
-                Explore GitHub Repositories
-              </button>
             </div>
             
             <div className="hidden md:block">
