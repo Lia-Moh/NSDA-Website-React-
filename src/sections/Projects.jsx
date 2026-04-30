@@ -1,8 +1,12 @@
-import React from "react";
-import "../styles/projects.css";
-import { projects } from "../data/projects";
+import React from 'react';
 
-function Projects() {
+export default function Projects() {
+  const projects = [
+    { tech: "Python / Telegram", title: "Nejm Ask Bot", description: "A sophisticated knowledge-base bot for student inquiries and community management.", icon: "fab fa-telegram" },
+    { tech: "Node.js", title: "Prayer Times API", description: "High-performance microservice providing accurate calculation methods globally.", icon: "fas fa-cloud-moon" },
+    { tech: "React", title: "Quran Study App", description: "Cross-platform application for structured study and tafsir tracking.", icon: "fas fa-book-quran" }
+  ];
+
   return (
     <>
       {/* Top Navigation Bar */}
@@ -58,61 +62,62 @@ function Projects() {
         {/* Featured Projects Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-24">
           
-{/* Project 1: Daily Quran Automation Bot (Large) */}
-<div className="md:col-span-8 group relative bg-surface-container-lowest rounded-lg p-8 overflow-hidden shadow-[0_12px_40px_rgba(1,52,99,0.06)] hover:-translate-y-1 transition-all duration-300">
-  <div className="flex flex-col h-full">
-    <div className="flex justify-between items-start mb-12">
-      <div>
-        <div className="flex items-center space-x-2 mb-2">
-          <span className="px-2 py-0.5 rounded bg-primary-container/10 text-primary-container text-[10px] font-bold uppercase tracking-wider">
-            Python
-          </span>
-          <span className="px-2 py-0.5 rounded bg-secondary-container/20 text-secondary text-[10px] font-bold uppercase tracking-wider">
-            Telegram API
-          </span>
-          <span className="px-2 py-0.5 rounded bg-green-100 text-green-800 text-[10px] font-bold uppercase tracking-wider">
-            Quran API
-          </span>
-        </div>
-        <h3 className="font-headline text-3xl font-bold text-primary">Daily Quran Automation Bot</h3>
-      </div>
-      <div className="flex space-x-4 text-on-surface-variant/60">
-        <div className="flex items-center text-sm">
-          <span className="material-symbols-outlined text-base mr-1">star</span> 156
-        </div>
-        <div className="flex items-center text-sm">
-          <span className="material-symbols-outlined text-base mr-1">fork_right</span> 53
-        </div>
-      </div>
-    </div>
-    
-    <p className="text-on-surface-variant mb-8 max-w-md">
-      Automated daily Quran verses and tafsir delivery via Telegram. Features personalized schedules, Arabic recitation, and translation support for deeper understanding.
-    </p>
-    
-    <div className="mt-auto flex items-center justify-between">
-      <div className="flex -space-x-2">
-        <div className="w-8 h-8 rounded-full border-2 border-surface bg-surface-container-high overflow-hidden" title="Contributor">
-          <div className="w-full h-full bg-gradient-to-br from-[#3a6091] to-[#1f4878]"></div>
-        </div>
-        <div className="w-8 h-8 rounded-full border-2 border-surface bg-surface-container-high overflow-hidden" title="Contributor">
-          <div className="w-full h-full bg-gradient-to-br from-[#fdbe54] to-[#7f5600]"></div>
-        </div>
-        <div className="w-8 h-8 rounded-full border-2 border-surface bg-surface-container-high flex items-center justify-center text-[10px] font-bold text-on-surface-variant">
-          +12
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  {/* Code Snippet Motif Overlay */}
-  <div className="absolute -right-12 bottom-1/4 opacity-5 rotate-12 pointer-events-none">
-    <pre className="text-xs font-mono"><code>{`async def send_daily_verse(chat_id):
-    verse = await get_random_verse()
-    translation = await get_translation(verse)
-    await bot.send_message(chat_id, f"{verse}\\n\\n{translation}")`}</code></pre>
-  </div>
-</div>
+          {/* Project 1: Nejm Ask Bot (Large) */}
+          <div className="md:col-span-8 group relative bg-surface-container-lowest rounded-lg p-8 overflow-hidden shadow-[0_12px_40px_rgba(1,52,99,0.06)] hover:-translate-y-1 transition-all duration-300">
+            <div className="flex flex-col h-full">
+              <div className="flex justify-between items-start mb-12">
+                <div>
+                  <div className="flex items-center space-x-2 mb-2">
+                    <span className="px-2 py-0.5 rounded bg-primary-container/10 text-primary-container text-[10px] font-bold uppercase tracking-wider">
+                      Python
+                    </span>
+                    <span className="px-2 py-0.5 rounded bg-secondary-container/20 text-secondary text-[10px] font-bold uppercase tracking-wider">
+                      Telegram
+                    </span>
+                  </div>
+                  <h3 className="font-headline text-3xl font-bold text-primary">Nejm Ask Bot</h3>
+                </div>
+                <div className="flex space-x-4 text-on-surface-variant/60">
+                  <div className="flex items-center text-sm">
+                    <span className="material-symbols-outlined text-base mr-1">star</span> 124
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <span className="material-symbols-outlined text-base mr-1">fork_right</span> 42
+                  </div>
+                </div>
+              </div>
+              
+              <p className="text-on-surface-variant mb-8 max-w-md">
+                Automating community inquiries through a robust Python-based Telegram bot. Designed for high-concurrency and seamless user interaction.
+              </p>
+              
+              <div className="mt-auto flex items-center justify-between">
+                <div className="flex -space-x-2">
+                  <div className="w-8 h-8 rounded-full border-2 border-surface bg-surface-container-high overflow-hidden" title="Contributor">
+                    <div className="w-full h-full bg-gradient-to-br from-[#3a6091] to-[#1f4878]"></div>
+                  </div>
+                  <div className="w-8 h-8 rounded-full border-2 border-surface bg-surface-container-high overflow-hidden" title="Contributor">
+                    <div className="w-full h-full bg-gradient-to-br from-[#fdbe54] to-[#7f5600]"></div>
+                  </div>
+                  <div className="w-8 h-8 rounded-full border-2 border-surface bg-surface-container-high flex items-center justify-center text-[10px] font-bold text-on-surface-variant">
+                    +8
+                  </div>
+                </div>
+                <a className="flex items-center font-bold text-primary hover:text-secondary transition-colors" href="#">
+                  View Repository <span className="material-symbols-outlined ml-2">arrow_outward</span>
+                </a>
+              </div>
+            </div>
+            
+            {/* Code Snippet Motif Overlay */}
+            <div className="absolute -right-12 bottom-1/4 opacity-5 rotate-12 pointer-events-none">
+              <pre className="text-xs font-mono"><code>{`async def handle_inquiry(update, context):
+    query = update.message.text
+    response = await ai_engine.analyze(query)
+    await context.bot.send_message(...)`}</code></pre>
+            </div>
+          </div>
+
           {/* Project 2: Prayer Times API (Small/Vertical) */}
           <div className="md:col-span-4 bg-primary-container rounded-lg p-8 flex flex-col justify-between text-white shadow-[0_12px_40px_rgba(1,52,99,0.06)] hover:-translate-y-1 transition-all duration-300">
             <div>
@@ -161,6 +166,9 @@ function Projects() {
                     Firestore
                   </span>
                 </div>
+                <button className="px-8 py-4 bg-primary text-white rounded-xl font-bold flex items-center hover:bg-primary/90 transition-colors">
+                  Launch Project <span className="material-symbols-outlined ml-2">rocket_launch</span>
+                </button>
               </div>
             <div className="flex-1 relative">
   <div className="relative rounded-lg overflow-hidden border-4 border-surface shadow-2xl bg-white">
@@ -183,20 +191,31 @@ function Projects() {
             <span className="text-primary text-sm font-bold">Q</span>
           </div>
           <div>
-            <h4 className="text-white text-sm font-bold">Quran Study</h4>
-            <p className="text-white/70 text-[10px]">Tafsir Progress Tracker</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: 'var(--prussian-blue)' }}>Open Source Ecosystem</h2>
+            <p className="text-gray-500 max-w-xl">We build tools that solve problems within the community while following modern engineering best practices.</p>
           </div>
+          <a 
+            href="https://github.com/NSDA-Community-Projects" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="inline-flex items-center gap-2 px-6 py-3 font-bold uppercase tracking-wide transition-all"
+            style={{ backgroundColor: 'var(--prussian-blue)', color: 'white', borderRadius: '9999px', textDecoration: 'none' }}
+            onMouseEnter={(e) => e.target.style.backgroundColor = 'var(--gold)'}
+            onMouseLeave={(e) => e.target.style.backgroundColor = 'var(--prussian-blue)'}
+          >
+            <i className="fab fa-github"></i> Explore All Repo →
+          </a>
         </div>
-      </div>
-      
-      {/* Mock Content Area */}
-      <div className="p-4">
-        {/* Surah Card */}
-        <div className="bg-gradient-to-br from-[#f3f3ff] to-white rounded-lg p-3 mb-3 shadow-sm border border-outline-variant/20">
-          <div className="flex justify-between items-start mb-2">
-            <div>
-              <span className="text-primary text-xs font-bold">Surah 1</span>
-              <h5 className="text-primary font-bold text-sm">Al-Fatihah</h5>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {projects.map((project, index) => (
+            <div key={index} className="bg-white rounded-xl overflow-hidden border border-gray-100 hover:border-gold transition-all p-6 shadow-lg">
+              <div className="flex justify-between items-start mb-4">
+                <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full" style={{ backgroundColor: 'rgba(1, 52, 99, 0.1)', color: 'var(--prussian-blue)' }}>{project.tech}</span>
+                <i className={`${project.icon} text-2xl`} style={{ color: 'var(--gold)' }}></i>
+              </div>
+              <h3 className="text-xl font-bold mb-2" style={{ color: 'var(--prussian-blue)' }}>{project.title}</h3>
+              <p className="text-gray-500 leading-relaxed">{project.description}</p>
+              {/* CONTRIBUTORS SECTION REMOVED - as requested */}
             </div>
             <span className="text-secondary-container text-xs">📖</span>
           </div>
@@ -282,6 +301,9 @@ function Projects() {
                   <span className="text-white">Hands-on experience with production-grade stacks</span>
                 </div>
               </div>
+              <button className="w-full md:w-auto px-10 py-5 bg-secondary-container text-primary font-extrabold rounded-xl hover:scale-95 transition-transform">
+                Explore GitHub Repositories
+              </button>
             </div>
             
             <div className="hidden md:block">
