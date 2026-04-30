@@ -58,59 +58,61 @@ function Projects() {
         {/* Featured Projects Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-24">
           
-          {/* Project 1: Nejm Ask Bot (Large) */}
-          <div className="md:col-span-8 group relative bg-surface-container-lowest rounded-lg p-8 overflow-hidden shadow-[0_12px_40px_rgba(1,52,99,0.06)] hover:-translate-y-1 transition-all duration-300">
-            <div className="flex flex-col h-full">
-              <div className="flex justify-between items-start mb-12">
-                <div>
-                  <div className="flex items-center space-x-2 mb-2">
-                    <span className="px-2 py-0.5 rounded bg-primary-container/10 text-primary-container text-[10px] font-bold uppercase tracking-wider">
-                      Python
-                    </span>
-                    <span className="px-2 py-0.5 rounded bg-secondary-container/20 text-secondary text-[10px] font-bold uppercase tracking-wider">
-                      Telegram
-                    </span>
-                  </div>
-                  <h3 className="font-headline text-3xl font-bold text-primary">Nejm Ask Bot</h3>
-                </div>
-                <div className="flex space-x-4 text-on-surface-variant/60">
-                  <div className="flex items-center text-sm">
-                    <span className="material-symbols-outlined text-base mr-1">star</span> 124
-                  </div>
-                  <div className="flex items-center text-sm">
-                    <span className="material-symbols-outlined text-base mr-1">fork_right</span> 42
-                  </div>
-                </div>
-              </div>
-              
-              <p className="text-on-surface-variant mb-8 max-w-md">
-                Automating community inquiries through a robust Python-based Telegram bot. Designed for high-concurrency and seamless user interaction.
-              </p>
-              
-              <div className="mt-auto flex items-center justify-between">
-                <div className="flex -space-x-2">
-                  <div className="w-8 h-8 rounded-full border-2 border-surface bg-surface-container-high overflow-hidden" title="Contributor">
-                    <div className="w-full h-full bg-gradient-to-br from-[#3a6091] to-[#1f4878]"></div>
-                  </div>
-                  <div className="w-8 h-8 rounded-full border-2 border-surface bg-surface-container-high overflow-hidden" title="Contributor">
-                    <div className="w-full h-full bg-gradient-to-br from-[#fdbe54] to-[#7f5600]"></div>
-                  </div>
-                  <div className="w-8 h-8 rounded-full border-2 border-surface bg-surface-container-high flex items-center justify-center text-[10px] font-bold text-on-surface-variant">
-                    +8
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Code Snippet Motif Overlay */}
-            <div className="absolute -right-12 bottom-1/4 opacity-5 rotate-12 pointer-events-none">
-              <pre className="text-xs font-mono"><code>{`async def handle_inquiry(update, context):
-    query = update.message.text
-    response = await ai_engine.analyze(query)
-    await context.bot.send_message(...)`}</code></pre>
-            </div>
-          </div>
-
+{/* Project 1: Daily Quran Automation Bot (Large) */}
+<div className="md:col-span-8 group relative bg-surface-container-lowest rounded-lg p-8 overflow-hidden shadow-[0_12px_40px_rgba(1,52,99,0.06)] hover:-translate-y-1 transition-all duration-300">
+  <div className="flex flex-col h-full">
+    <div className="flex justify-between items-start mb-12">
+      <div>
+        <div className="flex items-center space-x-2 mb-2">
+          <span className="px-2 py-0.5 rounded bg-primary-container/10 text-primary-container text-[10px] font-bold uppercase tracking-wider">
+            Python
+          </span>
+          <span className="px-2 py-0.5 rounded bg-secondary-container/20 text-secondary text-[10px] font-bold uppercase tracking-wider">
+            Telegram API
+          </span>
+          <span className="px-2 py-0.5 rounded bg-green-100 text-green-800 text-[10px] font-bold uppercase tracking-wider">
+            Quran API
+          </span>
+        </div>
+        <h3 className="font-headline text-3xl font-bold text-primary">Daily Quran Automation Bot</h3>
+      </div>
+      <div className="flex space-x-4 text-on-surface-variant/60">
+        <div className="flex items-center text-sm">
+          <span className="material-symbols-outlined text-base mr-1">star</span> 156
+        </div>
+        <div className="flex items-center text-sm">
+          <span className="material-symbols-outlined text-base mr-1">fork_right</span> 53
+        </div>
+      </div>
+    </div>
+    
+    <p className="text-on-surface-variant mb-8 max-w-md">
+      Automated daily Quran verses and tafsir delivery via Telegram. Features personalized schedules, Arabic recitation, and translation support for deeper understanding.
+    </p>
+    
+    <div className="mt-auto flex items-center justify-between">
+      <div className="flex -space-x-2">
+        <div className="w-8 h-8 rounded-full border-2 border-surface bg-surface-container-high overflow-hidden" title="Contributor">
+          <div className="w-full h-full bg-gradient-to-br from-[#3a6091] to-[#1f4878]"></div>
+        </div>
+        <div className="w-8 h-8 rounded-full border-2 border-surface bg-surface-container-high overflow-hidden" title="Contributor">
+          <div className="w-full h-full bg-gradient-to-br from-[#fdbe54] to-[#7f5600]"></div>
+        </div>
+        <div className="w-8 h-8 rounded-full border-2 border-surface bg-surface-container-high flex items-center justify-center text-[10px] font-bold text-on-surface-variant">
+          +12
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  {/* Code Snippet Motif Overlay */}
+  <div className="absolute -right-12 bottom-1/4 opacity-5 rotate-12 pointer-events-none">
+    <pre className="text-xs font-mono"><code>{`async def send_daily_verse(chat_id):
+    verse = await get_random_verse()
+    translation = await get_translation(verse)
+    await bot.send_message(chat_id, f"{verse}\\n\\n{translation}")`}</code></pre>
+  </div>
+</div>
           {/* Project 2: Prayer Times API (Small/Vertical) */}
           <div className="md:col-span-4 bg-primary-container rounded-lg p-8 flex flex-col justify-between text-white shadow-[0_12px_40px_rgba(1,52,99,0.06)] hover:-translate-y-1 transition-all duration-300">
             <div>
