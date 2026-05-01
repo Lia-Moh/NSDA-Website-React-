@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-const sections = ['about', 'what-we-do', 'projects', 'nujum', 'leadership'];
+const sections = ['about', 'what-we-do', 'mentorship', 'projects', 'nujum', 'leadership'];
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -95,7 +95,7 @@ export default function Navbar() {
           <img 
             src="/nsda.png" 
             alt="NSDA Logo" 
-            style={{ height: '45px', width: 'auto', display: 'block' }}
+            className="h-[45px] w-auto block"
             onError={(e) => { e.target.onerror = null; e.target.style.display = 'none'; }}
           />
           <span style={{ fontSize: '24px', fontWeight: '700', color: '#013463', letterSpacing: '1px' }}>NSDA</span>
