@@ -102,7 +102,7 @@ export default function Navbar() {
           <img 
             src="/nsda.png" 
             alt="NSDA Logo" 
-            style={{ height: '45px', width: 'auto', display: 'block' }}
+            className="h-[45px] w-auto block"
             onError={(e) => { e.target.onerror = null; e.target.style.display = 'none'; }}
           />
           <span style={{ fontSize: '24px', fontWeight: '700', color: '#013463', letterSpacing: '1px' }}>NSDA</span>
